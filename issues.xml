@@ -6,7 +6,7 @@
     <note>Most cases of //accuracy// are addressed by one of the more specific subtypes listed below.</note>
     <note>In Machine Translation literature, this category is typically referred to as “Adequacy”.</note>
   </notes>
-  <issue applies_to="target" id="addition" name="Addition">
+  <issue applies_to="target" core="yes" id="addition" name="Addition">
     <definition>The target text includes text not present in the source.</definition>
     <examples>
       <example>A translation includes portions of another translation that were inadvertently pasted into the document.</example>
@@ -21,7 +21,7 @@
       <example>A text used for a highly formal announcement uses the Norwegian <em>du</em> form instead of the expected <em>De</em>.</example>
     </examples>
   </issue>
-  <issue applies_to="target" id="mistranslation" name="Mistranslation">
+  <issue applies_to="target" core="yes" id="mistranslation" name="Mistranslation">
     <definition>The target content does not accurately represent the source content.</definition>
     <examples>
       <example>A source text states that a medicine should not be administered in doses greater than 200 mg, but the translation states that it should be administered in doses greater than 200 mg (i.e., negation has been omitted).</example>
@@ -108,12 +108,12 @@
       </examples>
     </issue>
   </issue>
-  <issue applies_to="target" id="omission" name="Omission">
+  <issue applies_to="target" core="yes" id="omission" name="Omission">
     <definition>Content is missing from the translation that is present in the source.</definition>
     <examples>
       <example>A paragraph present in the source is missing in the translation</example>
     </examples>
-    <issue applies_to="target" id="omitted-variable" name="Omitted variable">
+    <issue applies_to="target" core="yes" id="omitted-variable" name="Omitted variable">
       <definition>A variable placeholder is omitted from a translated text</definition>
       <examples>
         <example>A translated text should read “Number of lives remaining: $lifeNumber” but is rendered as “Number of lives remaining:”, with the variable <code>$lifeNumber</code> omitted</example>
@@ -129,7 +129,7 @@
       <example>The source text uses words that refer to a specific type of miltary officer but the target text refers to military officers in general</example>
     </examples>
   </issue>
-  <issue applies_to="target" id="untranslated" name="Untranslated">
+  <issue applies_to="target" core="yes" id="untranslated" name="Untranslated">
     <definition>Content that should have been translated has been left untranslated.</definition>
     <examples>
       <example>A sentence in a Japanese document translated into English is left in Japanese.</example>
@@ -346,7 +346,7 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
     </examples>
   </issue>
 </issue>
-<issue applies_to="source target" id="fluency" name="Fluency">
+<issue applies_to="source target" core="yes" id="fluency" name="Fluency">
   <definition>Issues related to the form or content of a text, irrespective as to whether it is a translation or not.</definition>
   <notes>
     <note>If an issue can be detected <em>only</em> by comparing the source and target, it MUST NOT be categorized as //fluency// or any of its children.</note>
@@ -427,7 +427,7 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       <example>A paragraph appears verbatim twice in a row.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="grammar" name="Grammar">
+  <issue applies_to="source target" core="yes" id="grammar" name="Grammar">
     <definition>Issues related to the grammar or syntax of the text, other than spelling and orthography.</definition>
     <examples>
       <example>An English text reads “The man was seeing <em>the his wife</em>.”</example>
@@ -469,7 +469,7 @@ An English text reads “After the button is pushing” (present progressive) in
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="inconsistency" name="Inconsistency">
+  <issue applies_to="source target" core="yes" id="inconsistency" name="Inconsistency">
     <definition>The text shows internal inconsistency.</definition>
     <examples>
       <example>The text states that bug reports should be submitted to a mailing list in one place and via an online bug tracker tool in another.</example>
@@ -707,7 +707,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>A listing of items should be in alphabetical order but appears in a random order instead.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="spelling" name="Spelling">
+  <issue applies_to="source target" core="yes" id="spelling" name="Spelling">
     <definition>Issues related to spelling of words</definition>
     <examples>
       <example>The German word <em>Zustellung</em> is spelled <em>Zustetlugn</em>.</example>
@@ -725,7 +725,7 @@ An English text reads “After the button is pushing” (present progressive) in
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="typography" name="Typography">
+  <issue applies_to="source target" core="yes" id="typography" name="Typography">
     <definition>Issues related to the mechanical presentation of text. This category should be used for any typographical errors other than spelling.</definition>
     <notes>
       <note>Do not use for issues related to //spelling//.</note>
@@ -757,7 +757,7 @@ An English text reads “After the button is pushing” (present progressive) in
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="unintelligible" name="Unintelligible">
+  <issue applies_to="source target" core="yes" id="unintelligible" name="Unintelligible">
     <definition>The exact nature of the error cannot be determined. Indicates a major break down in fluency.</definition>
     <examples>
       <example>The following text appears in an English translation of a German automotive manual: “The brake from whe this કુતારો િસ S149235 part numbr,,.”</example>
@@ -1103,7 +1103,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>A printer driver supports only international A paper sizes, and therefore crops data when printing to US Letter paper.</example>
     </examples>
   </issue>
-  <issue applies_to="source" id="resource-externalization" name="Resource externalization">
+  <issue applies_to="source" core="yes" id="resource-externalization" name="Resource externalization">
     <definition>Translatable resources have not properly been externalized from functional code.</definition>
     <notes>
       <note>Standard practice in writing international code is to put all translatable resource into external resources (such as files containing UI strings). Failure to do so is a major cause of problems or failure in software localization tasks.</note>
@@ -1179,7 +1179,7 @@ An English text reads “After the button is pushing” (present progressive) in
     <example>A quality process checks for errors generated from speech-to-text generated during conference interpretation. Because this error type is highly specific to the specific situation, it is not included in any predefined issue type elsewhere.</example>
   </examples>
 </issue>
-<issue applies_to="source target" id="style" name="Style">
+<issue applies_to="source target" core="yes" id="style" name="Style">
   <definition>The text has stylistic problems.</definition>
   <examples>
     <example>The translation of a light-hearted and humorous advertising campaign is in a serious and “heavy” style even though specifications said it should match the style of the source text.</example>
@@ -1205,7 +1205,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>One part of a text is written in a light and “terse” style while other sections are written in a more wordy style.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="third-party-style" name="Third-party style">
+  <issue applies_to="source target" core="yes" id="third-party-style" name="Third-party style">
     <definition>The text violates a third-party style guide</definition>
     <examples>
       <example>Specifications stated that English text was to be formatted according to the Chicago Manual of Style, but the text delivered followed the American Psychological Association style guide.</example>
@@ -1218,7 +1218,7 @@ An English text reads “After the button is pushing” (present progressive) in
     </examples>
   </issue>
 </issue>
-<issue applies_to="source target" id="terminology" name="Terminology">
+<issue applies_to="source target" core="yes" id="terminology" name="Terminology">
   <definition>A term (domain-specific word) is translated with a term other than the one expected for the domain or otherwise specified.</definition>
   <notes>
     <note>All issues specifically related to use of domain- or organization-specific terminology are included in this issue and its children.<br /><br />Do not use this issue if a text is simply mistranslated, i.e., if the translation would be a valid translation of the source but simply does not use the particular mandated terminology. For example, if a text translates <em>[river] bank</em> into Spanish as <em>banco</em> (a financial institution) instead of <em>orilla</em> (a river bank), this would be a //mistranslation// because <em>banco</em> would <em>never</em> be a valid term for the concept of a river bank. However, if a termbase specified that <em>orilla</em> should be used and the translation uses <em>ribera</em> instead, this would be a Terminology error because <em>ribera</em> is a valid term for the concept, but not the specified one.</note>
@@ -1291,7 +1291,7 @@ An English text reads “After the button is pushing” (present progressive) in
     </issue>
   </issue>
 </issue>
-<issue applies_to="source target" id="verity" name="Verity">
+<issue applies_to="source target" core="yes" id="verity" name="Verity">
   <definition>The text makes statements that contradict the world of the text</definition>
   <notes>
     <note>Verity issues can apply to the source or target text and often emerge during translation when, for example, a factual statement is true in the source locale but not true in the target locale.</note>
@@ -1299,7 +1299,7 @@ An English text reads “After the button is pushing” (present progressive) in
   <examples>
     <example>The text states that a feature is present on a certain model of automobile when in fact it is not available.</example>
   </examples>
-  <issue applies_to="source" id="completeness" name="Completeness">
+  <issue applies_to="source" core="yes" id="completeness" name="Completeness">
     <definition>The text is incomplete</definition>
     <notes>
       <note>//completeness// refers to instances in which needed content is missing in the source language. For cases where material present in the source language is not present in a translation, //omission// should be used instead.</note>
@@ -1334,7 +1334,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>A text assumes that the reader has knowledge of advanced particular physics, but the target audience does not generally have this knowledge.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="legal-requirements" name="Legal requirements">
+  <issue applies_to="source target" core="yes" id="legal-requirements" name="Legal requirements">
     <definition>A text does not meet legal requirements as set forth in the specifications.</definition>
     <notes>
       <note>Generally used in cases where the translation does not meet requirements. Cases in which the source text does not meet legal requirements are generally critical errors that will require rewriting the source text.</note>
@@ -1343,7 +1343,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>Specifications stated that FCC regulatory notices be replaced by CE notices rather than translated, but they were translated instead, rendering the text legally problematic for use in Europe.</example>
     </examples>
   </issue>
-  <issue applies_to="target" id="locale-specific-content" name="Locale-specific content">
+  <issue applies_to="target" core="yes" id="locale-specific-content" name="Locale-specific content">
     <definition>Content specific to the source locale does not apply to the intended target locale, audience, or purpose.</definition>
     <notes>
       <note>This issue type is distinguished from //locale-convention// in that this category applies to cases where text corresponds to the conventions of the target locale, but does not <em>apply</em> to the intended audience in the target locale. For example, if the Swedish advertising text mentioned above is properly translated and follows all mechanical locale conventions (e.g., using Swedish kronor instead of euros) but the offer does not apply to Sweden, //cocale-specific-content// should be chosen. If, however, the text applies to the locale, but does not follow locale conventions (e.g., numbers are formatted incorrectly for the locale), //locale-convention// should be used instead.</note>
