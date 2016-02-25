@@ -202,7 +202,7 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
           <example>A book title should have been italicized, but the italics were omitted.</example>
         </examples>
       </issue>
-      <issue applies_to="source target" id="single-double-width" name="Font, single/double-width (CJK only">
+      <issue applies_to="source target" id="single-double-width" name="Font, single/double-width (CJK only)">
         <definition>Single-width characters are used when double-width are intended, or vice versa.</definition>
         <examples>
           <example>A Japanese text includes カタカナ (full-width kana) when specifications required ｶﾀｶﾅ (half-width kana) instead, due to a limited display size.</example>
