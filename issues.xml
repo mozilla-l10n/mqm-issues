@@ -6,13 +6,13 @@
     <note>Most cases of //accuracy// are addressed by one of the more specific subtypes listed below.</note>
     <note>In Machine Translation literature, this category is typically referred to as “Adequacy”.</note>
   </notes>
-  <issue applies_to="target" core="yes" id="addition" name="Addition">
+  <issue applies_to="target" automatable="yes" core="yes" id="addition" name="Addition">
     <definition>The target text includes text not present in the source.</definition>
     <examples>
       <example>A translation includes portions of another translation that were inadvertently pasted into the document.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="grammatical-register" name="Grammatical register">
+  <issue applies_to="source target" automatable="yes" id="grammatical-register" name="Grammatical register">
     <definition>The content uses the wrong grammatical register, such as using informal pronouns or verb forms when their formal counterparts are required.</definition>
     <notes>
       <note>For cases of general stylistic formality that do not involve the incorrect use of grammatical markers of formality, //register// should be used instead.</note>
@@ -35,14 +35,14 @@
         <example>A text that means that someone is highly recommended is translated as “I cannot recommend this too highly.” (The meaning can be that the speaker cannot make a good recommendation or that it is highly recommended.)</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="date-time" name="Date/time">
+    <issue applies_to="target" automatable="yes" id="date-time" name="Date/time">
       <definition>Dates or times do not match between source and target.</definition>
       <examples>
         <example>A German source text provides the date 09.02.09 (=February 9, 2009) but the English target renders it as September 2, 2009.</example>
         <example>An English source text specifies a time of “4:40 PM” but this is rendered as 04:40 (=4:40 AM) in a German translation.</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="entity" name="Entity (such as name or place">
+    <issue applies_to="target" automatable="yes" id="entity" name="Entity (such as name or place">
       <definition>Names, places, or other “named entities” do not match</definition>
       <examples>
         <example>The source text refers to Dublin, Ohio, but the target incorrectly refers to Dublin, Ireland.</example>
@@ -63,13 +63,13 @@
         <example>A TM system returns “Press the Start button” as an exact (100%) match, when the proper translation should be “Press the Begin button”.</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="no-translate" name="Should not have been translated">
+    <issue applies_to="target" automatable="yes" id="no-translate" name="Should not have been translated">
       <definition>Text was translated that should have been left untranslated</definition>
       <examples>
         <example>A Japanese translation refers to “Apple Computers” as アップルコンピュータ when the English expression should have been left untranslated.</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="number" name="Number">
+    <issue applies_to="target" automatable="yes" id="number" name="Number">
       <definition>Numbers are inconsistent between source and target.</definition>
       <examples>
         <example>The source text specifies that a part is 124 mm long but the target text specifies that it is 135 mm long.</example>
@@ -101,19 +101,19 @@
         <example>A source text describes how a <em>piano action</em> (the mechanism connecting a piano key to the hammer that strikes a string) is translated in a way that incorrectly conveys the relationship between two components.</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="unit-conversion" name="Unit conversion">
+    <issue applies_to="target" automatable="yes" id="unit-conversion" name="Unit conversion">
       <definition>The target text has not converted numeric values as needed to adjust for different units (e.g., currencies, metric vs. U.S. measurement systems).</definition>
       <examples>
         <example>A source text specifies that an item is 25 centimeters (~10 inches) long, but the source states that it is 25 inches (63.5 cm) long.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="target" core="yes" id="omission" name="Omission">
+  <issue applies_to="target" automatable="yes" core="yes" id="omission" name="Omission">
     <definition>Content is missing from the translation that is present in the source.</definition>
     <examples>
       <example>A paragraph present in the source is missing in the translation</example>
     </examples>
-    <issue applies_to="target" core="yes" id="omitted-variable" name="Omitted variable">
+    <issue applies_to="target" automatable="yes" core="yes" id="omitted-variable" name="Omitted variable">
       <definition>A variable placeholder is omitted from a translated text</definition>
       <examples>
         <example>A translated text should read “Number of lives remaining: $lifeNumber” but is rendered as “Number of lives remaining:”, with the variable <code>$lifeNumber</code> omitted</example>
@@ -129,12 +129,12 @@
       <example>The source text uses words that refer to a specific type of miltary officer but the target text refers to military officers in general</example>
     </examples>
   </issue>
-  <issue applies_to="target" core="yes" id="untranslated" name="Untranslated">
+  <issue applies_to="target" automatable="yes" core="yes" id="untranslated" name="Untranslated">
     <definition>Content that should have been translated has been left untranslated.</definition>
     <examples>
       <example>A sentence in a Japanese document translated into English is left in Japanese.</example>
     </examples>
-    <issue applies_to="target" id="untranslated-graphic" name="Untranslated graphic">
+    <issue applies_to="target" automatable="yes" id="untranslated-graphic" name="Untranslated graphic">
       <definition>Text in a graphic was left untranslated.</definition>
       <examples>
         <example>Part labels in a graphic were left untranslated even though running text was translated</example>
@@ -180,7 +180,7 @@
       <example>A word processor has been set to use German hyphenation for a Hungarian text. As a result the word <em>mennyi</em> is hyphenated as <em>men-nyi</em> instead of the correct <em>meny-nyi</em>.</example>
     </examples>
   </issue>
-  <issue applies_to="target" id="length" name="Length">
+  <issue applies_to="target" automatable="yes" id="length" name="Length">
     <definition>There is a significant discrepancy between the source and the target text lengths.</definition>
     <examples>
       <example>An English sentence is 253 characters long but its German translation is 51 characters long.</example>
@@ -240,12 +240,12 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="markup" name="Markup">
+  <issue applies_to="source target" automatable="yes" id="markup" name="Markup">
     <definition>Issues related to “markup” (codes used to represent structure or formatting of text, also known as “tags”).</definition>
     <examples>
       <example>Markup is used incorrectly, resulting in incorrect formatting.</example>
     </examples>
-    <issue applies_to="target" id="added-markup" name="Added markup">
+    <issue applies_to="target" automatable="yes" id="added-markup" name="Added markup">
       <definition>The target text has markup added with no corresponding markup in the source.</definition>
       <examples>
         <example>A source segment has no formatting tags, but the target has a set of italic tags.</example>
@@ -257,26 +257,26 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
         <example>A target text has a set of tags for bold face in the same location where the source has tags for italics.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="misplaced-markup" name="Misplaced markup">
+    <issue applies_to="source target" automatable="yes" id="misplaced-markup" name="Misplaced markup">
       <definition>Markup is present but misplaced.</definition>
       <examples>
         <example>A segment has three sets of paired formatting tags at the end, after the final full stop (.).</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="missing-markup" name="Missing markup">
+    <issue applies_to="target" automatable="yes" id="missing-markup" name="Missing markup">
       <definition>Markup in the source is missing in the target.</definition>
       <examples>
         <example>A source segment has a set of italic tags, but the target text does not have any tags.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="questionable-markup" name="Questionable markup">
+    <issue applies_to="source target" automatable="yes" id="questionable-markup" name="Questionable markup">
       <definition>Markup is present that appears malformed or inappropriate for its context.</definition>
       <examples>
         <example>A text has opening tags but no closing tags for formatting.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="missing-text" name="Missing text">
+  <issue applies_to="source target" automatable="yes" id="missing-text" name="Missing text">
     <definition>Existing text is missing in the final laid-out version</definition>
     <notes>
       <note>This issue does not refer to omitted text (i.e., text that was present in the source but not present in the translation). Instead it refers only to cases where text is present in some form but does not appear in the laid-out version. It also does not refer to text that has been truncated due to text expansion.</note>
@@ -336,7 +336,7 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       </examples>
     </issue>
   </issue>
-  <issue applies_to="target" id="truncation-text-expansion" name="Truncation/text expansion">
+  <issue applies_to="target" automatable="yes" id="truncation-text-expansion" name="Truncation/text expansion">
     <definition>The target text has insufficient room to display the translated text according to specifications.</definition>
     <notes>
       <note>This issue may indicate an underlying //internationalization// problem.</note>
@@ -369,25 +369,25 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="broken-link" name="Link/cross-reference">
+  <issue applies_to="source target" automatable="yes" id="broken-link" name="Link/cross-reference">
     <definition>A link or cross reference points to an incorrect or nonexistent location</definition>
     <examples>
       <example>An HTML document has an href that points to a file that does not exist.</example>
     </examples>
-    <issue applies_to="source target" id="document-external-link" name="Document-external link">
+    <issue applies_to="source target" automatable="yes" id="document-external-link" name="Document-external link">
       <definition>A link or cross reference points to an incorrect or nonexistent location outside of the same document within which it occurs</definition>
       <examples>
         <example>A link in an HTML document points to a U.S. government URL that has moved and no longer exists.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="document-internal-link" name="Document-internal link">
+    <issue applies_to="source target" automatable="yes" id="document-internal-link" name="Document-internal link">
       <definition>A link or cross reference points to an incorrect or nonexistent location within the same document within which it occurs.</definition>
       <examples>
         <example>An internal link refers to the location “#section5” but there is no anchor “section5” in the document.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="character-encoding" name="Character encoding">
+  <issue applies_to="source target" automatable="yes" id="character-encoding" name="Character encoding">
     <definition>Characters are garbled due to incorrect application of an encoding.</definition>
     <examples>
       <example>A text document in UTF-8 encoding is opened as ISO Latin-1, resulting in all “upper ASCII” characters being garbled.</example>
@@ -411,7 +411,7 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       <example>An English text is missing conjunctions and particles (e.g., “thus”, “therefore”, “but”, and “however”) needed for the logic of the text to be clear.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="corpus-conformance" name="Corpus conformance">
+  <issue applies_to="source target" automatable="yes" id="corpus-conformance" name="Corpus conformance">
     <definition>The content is deemed to have a level of conformance to a reference corpus. The non-conformance type reflects the degree to which the text conforms to a reference corpus given an algorithm that combines several classes of error type to produce an aggregate rating.</definition>
     <notes>
       <note>One example of this issue type might involve output from a quality estimation system that delivers a warning that a text has a very low quality estimation score.</note>
@@ -420,49 +420,49 @@ A portion of the text displays a (non-systematic) formatting problem (e.g., a si
       <example>A text reading “The harbour connected which to printer is busy or configared not properly” is flagged by a language analysis tool as suspect based on its lack of conformance to an existing corpus.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="duplication" name="Duplication">
+  <issue applies_to="source target" automatable="yes" id="duplication" name="Duplication">
     <definition>Content has been duplicated (e.g., a word or longer portion of text is repeated unintentionally).</definition>
     <examples>
       <example>A text reads “The man the man whom she saw…”</example>
       <example>A paragraph appears verbatim twice in a row.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" core="yes" id="grammar" name="Grammar">
+  <issue applies_to="source target" automatable="yes" core="yes" id="grammar" name="Grammar">
     <definition>Issues related to the grammar or syntax of the text, other than spelling and orthography.</definition>
     <examples>
       <example>An English text reads “The man was seeing <em>the his wife</em>.”</example>
     </examples>
-    <issue applies_to="source target" id="function-words" name="Function words">
+    <issue applies_to="source target" automatable="yes" id="function-words" name="Function words">
       <definition>A function word (e.g., a preposition, “helping verb”, article, determiner) is used incorrectly.</definition>
       <examples>
         <example>A text reads “Check the part number as given in the screen” instead of “…on the screen”.</example>
         <example>A text reads “The graphic is then copied into an internal memory” instead of “The graphic is copied to internal memory.”</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="word-form" name="Word form">
+    <issue applies_to="source target" automatable="yes" id="word-form" name="Word form">
       <definition>There is a problem in the form of a word</definition>
       <examples>
         <example>An English text has <em>becomed</em> instead of <em>became</em>.</example>
       </examples>
-      <issue applies_to="source target" id="agreement" name="Agreement">
+      <issue applies_to="source target" automatable="yes" id="agreement" name="Agreement">
         <definition>Two or more words do not agree with respect to case, number, person, or other grammatical features</definition>
         <examples>
           <example>A text reads “They was expecting a report.”</example>
         </examples>
       </issue>
-      <issue applies_to="source target" id="part-of-speech" name="Part of speech">
+      <issue applies_to="source target" automatable="yes" id="part-of-speech" name="Part of speech">
         <definition>A word is the wrong part of speech</definition>
         <examples>
           <example>A text reads “Read these instructions careful” instead of “Read these instructions carefully.”</example>
         </examples>
       </issue>
-      <issue applies_to="source target" id="tense-mood-aspect" name="Tense/mood/aspect">
+      <issue applies_to="source target" automatable="yes" id="tense-mood-aspect" name="Tense/mood/aspect">
         <definition>A verbal form displays the wrong tense, mood, or aspect</definition>
         <examples>
 An English text reads “After the button is pushing” (present progressive) instead of “After the button has been pushed” (past passive)        </examples>
       </issue>
     </issue>
-    <issue applies_to="source target" id="word-order" name="Word order">
+    <issue applies_to="source target" automatable="yes" id="word-order" name="Word order">
       <definition>The word order is incorrect</definition>
       <examples>
         <example>A German text reads “Er hat gesehen den Mann” instead of “Er hat den Mann gesehen.”</example>
@@ -489,7 +489,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A screen shot shows a button with the text “Open other…” but the text referring to the screen shot tells the user to click on the “Open alternative…” button.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="inconsistent-abbreviations" name="Inconsistent abbreviations">
+    <issue applies_to="source target" automatable="yes" id="inconsistent-abbreviations" name="Inconsistent abbreviations">
       <definition>The form of abbreviations is inconsistent in the text.</definition>
       <examples>
         <example>A text uses both “app.” and “approx.” for approximately.</example>
@@ -502,31 +502,31 @@ An English text reads “After the button is pushing” (present progressive) in
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="index-toc" name="Index/TOC">
+  <issue applies_to="source target" automatable="yes" id="index-toc" name="Index/TOC">
     <definition>Issues related to an index or Table of Contents (TOC).</definition>
     <examples>
       <example>A Table of Contents is missing items that should be included.</example>
     </examples>
-    <issue applies_to="source target" id="index-toc-format" name="Index/TOC format">
+    <issue applies_to="source target" automatable="yes" id="index-toc-format" name="Index/TOC format">
       <definition>An index/TOC is formatted incorrectly</definition>
       <examples>
         <example>A Table of Content should be formatted with variable (hierarchical) indenting and tab leader characters, but is instead displayed as a “run-in” list.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="missing-incorrect-toc-item" name="Missing/incorrect TOC item">
+    <issue applies_to="source target" automatable="yes" id="missing-incorrect-toc-item" name="Missing/incorrect TOC item">
       <definition>Items in an index/TOC are incorrect or missing</definition>
       <examples>
         <example>A chapter heading is not listed in a Table of Contents.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="page-references" name="Page references">
+    <issue applies_to="source target" automatable="yes" id="page-references" name="Page references">
       <definition>An index/TOC refers to incorrect page numbers</definition>
       <examples>
         <example>A table of contents refers to page numbers from the source document that do not apply to the translated text.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="locale-convention" name="Locale convention">
+  <issue applies_to="source target" automatable="yes" id="locale-convention" name="Locale convention">
     <definition>The text does not adhere to locale-specific mechanical conventions and violates requirements for the presentation of content in the target locale.</definition>
     <notes>
       <note>This issue type is distinguished from //locale-specific-content// in that this category refers only to whether the text is given the proper mechanical form for the locale, not whether the content applies to the locale or not. If text conforms to conventions for the locale, but does not apply to the target locale, //locale-specific-content// should be used instead.</note>
@@ -543,7 +543,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <examples>
         <example>An online form translated from English to Hindi requires a street number even though many addresses in India do not include a house number.</example>
       </examples>
-      <issue applies_to="source target" id="postal-code" name="Postal code">
+      <issue applies_to="source target" automatable="yes" id="postal-code" name="Postal code">
         <definition>Content uses the wrong form for postal codes.</definition>
         <notes>
           <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -553,7 +553,7 @@ An English text reads “After the button is pushing” (present progressive) in
         </examples>
       </issue>
     </issue>
-    <issue applies_to="source target" id="calendar-type" name="Calendar type">
+    <issue applies_to="source target" automatable="yes" id="calendar-type" name="Calendar type">
       <definition>Content uses the wrong type of calendar.</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -562,7 +562,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A tourism text translated from Arabic English gives a year as 1435, but it should have been converted from the Islamic calendar to the Gregorian calendar year 2014.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="culture-specific" name="Culture-specific reference">
+    <issue applies_to="source target" automatable="yes" id="culture-specific" name="Culture-specific reference">
       <definition>Content inappropriately uses a culture-specific reference that will not be understandable to the intended audience</definition>
       <notes>
         <note>In the cases of texts that were written with the intention that they be translated, this issue may indicate a broader conceptual or Internationalization problem.</note>
@@ -572,7 +572,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>An marketing text in Greek includes reference to popular Greek music. When translated into English these references are not understandable to the target audience.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="currency-format" name="Currency format">
+    <issue applies_to="source target" automatable="yes" id="currency-format" name="Currency format">
       <definition>Content uses the wrong format for currency.</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -581,18 +581,18 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A text dealing with business transactions from English into Hindi assumes that all currencies will be expressed in simple units, while the convention in India is to give such prices in lakh rupees (10000 rupees)</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="date-format" name="Date format">
+    <issue applies_to="source target" automatable="yes" id="date-format" name="Date format">
       <definition>A text uses a date format inappropriate for its locale.</definition>
       <examples>
         <example>An English text has “2012-06-07” instead of the expected “06/07/2012.”</example>
       </examples>
     </issue>
-    <issue applies_to="target" id="locale-specific-punctuation" name="Locale-specific punctuation">
+    <issue applies_to="target" automatable="yes" id="locale-specific-punctuation" name="Locale-specific punctuation">
       <definition>The text systematically uses punctuation not appropriate for the specified locale</definition>
       <examples>
         <example>A text translated from English to Japanese maintains European-style punctuation—such as full-stops (.)—instead of using the appropriate Japanese punctuation, such as the Japanese full stop (。).</example>
       </examples>
-      <issue applies_to="source target" id="quote-mark-type" name="Quote mark type">
+      <issue applies_to="source target" automatable="yes" id="quote-mark-type" name="Quote mark type">
         <definition>A text uses quote marks inappropriate for its locale.</definition>
         <notes>
           <note>Use this issue only if the problem is systematic. Otherwise use Typography or Punctuation, if available.</note>
@@ -602,13 +602,13 @@ An English text reads “After the button is pushing” (present progressive) in
         </examples>
       </issue>
     </issue>
-    <issue applies_to="source target" id="measurement-format" name="Measurement format">
+    <issue applies_to="source target" automatable="yes" id="measurement-format" name="Measurement format">
       <definition>A text uses a measurement format inappropriate for its locale.</definition>
       <examples>
         <example>A text in France uses feet and inches and Fahrenheit temperatures.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="name-format" name="Name format">
+    <issue applies_to="source target" automatable="yes" id="name-format" name="Name format">
       <definition>A text uses a name format inappropriate for its locale.</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -619,13 +619,13 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A translated text refers to “Pedro Diego Estavez” as “Mr. Estavez” rather than “Mr. Diego”.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="national-language-standard" name="National language standard">
+    <issue applies_to="source target" automatable="yes" id="national-language-standard" name="National language standard">
       <definition>A text violates national language standards.</definition>
       <examples>
         <example>A French advertising text uses anglicisms that are forbidden for print texts by the Academie française specifications.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="number-format" name="Number format">
+    <issue applies_to="source target" automatable="yes" id="number-format" name="Number format">
       <definition>A text uses a number format inappropriate for its locale.</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -635,7 +635,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A text translated for India has “10000” rather than “1000”.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="shortcut-key" name="Shortcut key">
+    <issue applies_to="source target" automatable="yes" id="shortcut-key" name="Shortcut key">
       <definition>A translated software product uses shortcuts that do not conform to locale expectations or that make no sense for the locale</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -644,7 +644,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A software product uses CTRL-S to save a file in Hungarian, rather than the appropriate CTRL-M (for <em>mentenni</em>).</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="telephone-format" name="Telephone format">
+    <issue applies_to="source target" automatable="yes" id="telephone-format" name="Telephone format">
       <definition>Content uses the wrong form for telephone numbers</definition>
       <notes>
         <note>Very often this issue indicates an underlying //internationalization// problem.</note>
@@ -653,20 +653,20 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A German text presents a telephone number in the format (xxx) xxx - xxxx instead of the expected 0xx followed by a group of digits separated into groups by spaces.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="time-format" name="Time format">
+    <issue applies_to="source target" automatable="yes" id="time-format" name="Time format">
       <definition>A text uses a time format inappropriate for its locale.</definition>
       <examples>
         <example>A text written for the U.S. uses a 24-hour time notation rather than AM/PM time.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="nonallowed-characters" name="Nonallowed characters">
+  <issue applies_to="source target" automatable="yes" id="nonallowed-characters" name="Nonallowed characters">
     <definition>The text includes characters that are not allowed.</definition>
     <examples>
       <example>A text may not include colons or forward- or back-slashes, which might cause confusion with path names on some computer systems, but it contains these characters.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="offensive" name="Offensive">
+  <issue applies_to="source target" automatable="yes" id="offensive" name="Offensive">
     <definition>Content is offensive according to the specifications</definition>
     <notes>
       <note>if <code>offensive</code> is to by used, clear guidelines should be given since content offensive in one context may be acceptable in another.</note>
@@ -678,13 +678,13 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>An American text uses the “OK” symbol (👌) to indicate approval, but this symbol is considered offensive in Brazil.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="pattern-problem" name="Pattern problem">
+  <issue applies_to="source target" automatable="yes" id="pattern-problem" name="Pattern problem">
     <definition>The text contains a pattern (e.g., text that matches a regular expression) that is not allowed.</definition>
     <examples>
       <example>The regular expression <code>[\"\'”’][,\\.;]</code> (i.e., a quote mark followed by a comma, full stop, or semicolon) is defined as not allowed for a project but a text contains the string <code>”,</code> (closing quote followed by a comma).</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="register" name="Register">
+  <issue applies_to="source target" automatable="yes" id="register" name="Register">
     <definition>The text uses a level of formality higher or lower than required by the specifications or general language conventions.</definition>
     <notes>
       <note>Register involves a number of factors, including appropriateness of the discourse for the specific subject field, the level of formality, and the mode of discourse (e.g., written text versus transcribed speech).</note>
@@ -694,38 +694,38 @@ An English text reads “After the button is pushing” (present progressive) in
     <examples>
       <example>A formal letter uses contractions, colloquialisms, and expressions characteristic of spoken rather than written language, and those comes across as less serious than intended.</example>
     </examples>
-    <issue applies_to="source target" id="variants-slang" name="Variants/slang">
+    <issue applies_to="source target" automatable="yes" id="variants-slang" name="Variants/slang">
       <definition>The text uses words such as slang that are inappropriate for the intended register.</definition>
       <examples>
         <example>A refers to dollars as “clams” in a case when this slang term would be inappropriate.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" id="sorting" name="Sorting">
+  <issue applies_to="source target" automatable="yes" id="sorting" name="Sorting">
     <definition>A list is not in the appropriately collated sequence.</definition>
     <examples>
       <example>A listing of items should be in alphabetical order but appears in a random order instead.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" core="yes" id="spelling" name="Spelling">
+  <issue applies_to="source target" automatable="yes" core="yes" id="spelling" name="Spelling">
     <definition>Issues related to spelling of words</definition>
     <examples>
       <example>The German word <em>Zustellung</em> is spelled <em>Zustetlugn</em>.</example>
     </examples>
-    <issue applies_to="source target" id="capitalization" name="Capitalization">
+    <issue applies_to="source target" automatable="yes" id="capitalization" name="Capitalization">
       <definition>Issues related to capitalization</definition>
       <examples>
         <example>The name <em>John Smith</em> is written as “john smith”</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="diacritics" name="Diacritics">
+    <issue applies_to="source target" automatable="yes" id="diacritics" name="Diacritics">
       <definition>Issues related to the use of diacritics</definition>
       <examples>
         <example>The Hungarian word <em>bőven</em> (using o with a double acute (˝)) is spelled as <em>bõven</em>, using a tilde (˜), which is not found in Hungarian.</example>
       </examples>
     </issue>
   </issue>
-  <issue applies_to="source target" core="yes" id="typography" name="Typography">
+  <issue applies_to="source target" automatable="yes" core="yes" id="typography" name="Typography">
     <definition>Issues related to the mechanical presentation of text. This category should be used for any typographical errors other than spelling.</definition>
     <notes>
       <note>Do not use for issues related to //spelling//.</note>
@@ -749,7 +749,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>A text reads “King Ludwig of Bavaria (1845–1896 was deposed on account of his supposed madness,” omitting the closing parenthesis around the dates.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="whitespace" name="Whitespace">
+    <issue applies_to="source target" automatable="yes" id="whitespace" name="Whitespace">
       <definition>Whitespace is used incorrectly</definition>
       <examples>
         <example>A document uses a string of space characters instead of tabs</example>
@@ -1103,7 +1103,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>A printer driver supports only international A paper sizes, and therefore crops data when printing to US Letter paper.</example>
     </examples>
   </issue>
-  <issue applies_to="source" core="yes" id="resource-externalization" name="Resource externalization">
+  <issue applies_to="source" automatable="yes" core="yes" id="resource-externalization" name="Resource externalization">
     <definition>Translatable resources have not properly been externalized from functional code.</definition>
     <notes>
       <note>Standard practice in writing international code is to put all translatable resource into external resources (such as files containing UI strings). Failure to do so is a major cause of problems or failure in software localization tasks.</note>
@@ -1190,7 +1190,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>A text is written with many embedded clauses and an excessively wordy style. While the meaning can be understood, the text is very awkward and difficult to follow.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" id="company-style" name="Company style">
+  <issue applies_to="source target" automatable="yes" id="company-style" name="Company style">
     <definition>The text violates company/organization-specific style guidelines.</definition>
     <examples>
       <example>Company style states that passive sentences may not be used but the text uses passive sentences.</example>
@@ -1205,7 +1205,7 @@ An English text reads “After the button is pushing” (present progressive) in
       <example>One part of a text is written in a light and “terse” style while other sections are written in a more wordy style.</example>
     </examples>
   </issue>
-  <issue applies_to="source target" core="yes" id="third-party-style" name="Third-party style">
+  <issue applies_to="source target" automatable="yes" core="yes" id="third-party-style" name="Third-party style">
     <definition>The text violates a third-party style guide</definition>
     <examples>
       <example>Specifications stated that English text was to be formatted according to the Chicago Manual of Style, but the text delivered followed the American Psychological Association style guide.</example>
@@ -1271,7 +1271,7 @@ An English text reads “After the button is pushing” (present progressive) in
     <examples>
       <example>A termbase specifies that the term <em>USB memory stick</em> shold be used, but the text uses <em>USB flash drive</em>.</example>
     </examples>
-    <issue applies_to="source target" id="terminology-company" name="Company terminology">
+    <issue applies_to="source target" automatable="yes" id="terminology-company" name="Company terminology">
       <definition>The text violates company/organization-specific terminology guidelines as specified in a termbase.</definition>
       <notes>
         <note>Should be used when it is necessary to distinguish company-specific terminology issues from more general //termbase// issues.</note>
@@ -1280,7 +1280,7 @@ An English text reads “After the button is pushing” (present progressive) in
         <example>Company-specific terminology guidelines specify that a product be called the “Acme Turbo2000™”, but the text calls it the “Acme Turbo” or the “Turbo200”.</example>
       </examples>
     </issue>
-    <issue applies_to="source target" id="terminology-third-party" name="Third-party termbase">
+    <issue applies_to="source target" automatable="yes" id="terminology-third-party" name="Third-party termbase">
       <definition>The text violates terminology guidelines as specified in a termbase from a third-party.</definition>
       <notes>
         <note>Should be used only when it is necessary to distinguish terminology issues related to third-party termbases from more general //termbase// issues.</note>
