@@ -1,0 +1,48 @@
+#scorecard {
+  display: table;
+}
+#scorecard .issue {
+  display: table-row;
+}
+#scorecard .issue > div {
+  border-top: solid 1px black;
+  padding-bottom: .5em;
+  padding-top: .1em;
+}
+#scorecard .issue > .name {
+  display: table-cell;
+  padding-right: 1em;
+  white-space: nowrap;
+}
+#scorecard .issue > .details {
+  display: table-cell;
+}
+#scorecard .issue .example {
+  display: none;
+}
+
+#scorecard .issue:not(.core) {
+  display: none;
+}
+#scorecard .issue:not(.target) {
+  display: none;
+}
+#scorecard .depth-1 > .name {
+  padding-left: 1em;
+}
+#scorecard .depth-2 > .name {
+  padding-left: 2em;
+}
+#scorecard .depth-3 > .name {
+  padding-left: 3em;
+}
+
+#scorecard:not(.depth-3) .issue.depth-3 {
+  display: none;
+}
+#scorecard:not(.depth-2) .issue.depth-2 {
+  display: none;
+}
+#scorecard:not(.depth-3) .issue.depth-3 {
+  display: none;
+}

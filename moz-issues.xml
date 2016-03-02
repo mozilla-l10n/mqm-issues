@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<issues>
+<issue id="accuracy" core="yes"></issue>
+<issue id="no-translate" core="yes"></issue>
+</issues>
