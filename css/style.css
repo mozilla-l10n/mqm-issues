@@ -1,5 +1,6 @@
 #scorecard {
   display: table;
+  width: 50em;
 }
 #scorecard .issue {
   display: table-row;
@@ -17,16 +18,7 @@
 #scorecard .issue > .details {
   display: table-cell;
 }
-#scorecard .issue .example {
-  display: none;
-}
 
-#scorecard .issue:not(.core) {
-  display: none;
-}
-#scorecard .issue:not(.target) {
-  display: none;
-}
 #scorecard .depth-1 > .name {
   padding-left: 1em;
 }
@@ -37,12 +29,8 @@
   padding-left: 3em;
 }
 
-#scorecard:not(.depth-3) .issue.depth-3 {
-  display: none;
-}
-#scorecard:not(.depth-2) .issue.depth-2 {
-  display: none;
-}
-#scorecard:not(.depth-3) .issue.depth-3 {
-  display: none;
+#scorecard .note {
+  border-left: solid grey 1px;
+  padding-left: 10px;
+  margin: 5px;
 }

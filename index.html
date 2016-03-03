@@ -6,6 +6,18 @@
         <link rel="stylesheet" href="css/style.css" type="text/css" />
     </head>
     <body>
+        <p>
+            <form id="flags">
+                <label><input type="checkbox" id="core" checked="checked">Only core</label><br>
+                <label><input type="checkbox" id="source">Show also source-only</label><br>
+                <label>
+                    <select id="depth">
+                        <option>0</option>
+                        <option selected="true">1</option>
+                        <option>2</option>
+                    </select> Depth</label>
+            </form>
+        </p>
         <div id="scorecard" class="depth-0 depth-1 depth-2 depth-3"></div>
     </body>
 </html>
